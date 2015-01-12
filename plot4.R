@@ -4,7 +4,7 @@ theData$DateTime <-strptime(paste(theData$Date,theData$Time), format="%d/%m/%Y %
 png(filename="plot4.png", width=480, height=480)
 par(mfcol = c(2,2))
 with(theData, {
-  hist(theData$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", col="red", ylim=c(0,1200))
+  plot(DateTime, Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
   
   plot(DateTime, Sub_metering_1, type="l", ylab="Energy Sub Metering", xlab="")
   lines(DateTime,Sub_metering_2, type="l", col="red")
